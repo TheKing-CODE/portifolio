@@ -1,0 +1,156 @@
+*{
+	margin: 0;
+    padding: 0;
+    background-color: #dad6ca;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1136px;    
+   /* box-sizing: border-box;*/    
+    border-bottom: solid;
+    border-color: #563444;
+    padding: 32px 0;
+    padding-bottom: 0px;
+    margin: auto ;    
+}
+
+
+
+nav ul{
+    list-style-type: none;
+}
+
+nav ul li{
+    display: inline;
+    margin-right: 50px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #563444;;
+}
+
+a:hover{
+    color: #1ec3ea;
+}
+
+.logo{
+    display: inline-block; 
+    vertical-align: middle;       
+  /*  border-style: solid;
+    box-sizing: border-box;*/
+
+}
+
+.introducao{
+    margin: auto;
+    margin-top: 60px;
+    width: 1140px;    
+    height: 368px;          
+    /*border-style: solid;
+    box-sizing: border-box;*/
+}
+
+
+.topo{        
+    display: inline-block;
+    vertical-align: middle;
+    width: 751px;
+    height: 246px;
+    gap: 24px;
+    opacity: 0px;
+    margin-top: 60px;        
+    padding-top: 5%;
+   /* box-sizing: border-box;
+    border-style: solid;
+    border-color: red;*/
+    padding: 0px;
+}
+
+.topo .msg1 .msg2{
+    font-family: 'Raleway', Courier, monospace;     
+}
+
+.topo .msg1{
+    font-size: 52px;
+    width: 700px;   
+}
+
+.topo .msg2{
+    font-size: 22px;
+    width: 400px;   
+}
+
+.links ul{
+    margin-top: 20px;
+    list-style-type: none;        
+}
+
+.links ul li{
+    display: inline-block;    
+}
+
+.links ul li a{    
+    color: black;
+    margin-right: 4px;
+    text-decoration: none;
+}
+
+.links ul li a:hover{
+    color: #17f9ff;
+}
+
+.circle-image{
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 100%;
+	border-style: solid;
+	border-color: #17f9ff;
+    width: 300px;
+    height: 300px;
+    margin-top: 10px;
+    gap: 0px;
+    opacity: 0px;
+}
+
+
+.sobre{    
+    width: 100%;
+    height: 383px;
+    background-color: #4f8699;            
+    /*border-style: solid;
+    border-color: green;*/
+    
+}
+
+.sobre .sobre-mim{    
+    width: 1136px;
+    height: 255px;
+    margin: auto;            
+    background-color: #4f8699;    
+    /*border-style: solid;
+    border-color: red;
+    box-sizing: border-box;    */
+    padding-top: 4%;
+    margin-top: 5%;
+}
+
+.sobre .sobre-mim .paragrafo1{
+    width: 800px;
+    margin-top: 12px;    
+    font-size: 22px;        
+    font-family: 'Raleway';     
+    background-color: #4f8699;
+    color: #dad6ca;
+}
+
+.skills{
+    width: 1136px;
+    height: 244px;
+    gap: 32px;
+    opacity: 0px;
+
+}
