@@ -119,7 +119,7 @@ a:hover{
 
 .sobre{    
     width: 100%;
-    height: 383px;
+    height: 430px;
     background-color: #4f8699;            
     /*border-style: solid;
     border-color: green;*/
@@ -148,29 +148,119 @@ a:hover{
 }
 
 .skills{    
+    display: flex;
+    position: relative;
+    justify-content: space-between;    
     margin: auto;    
     width: 1136px;
-    height: 244px;
+    height: 400px;
     gap: 32px;
     opacity: 0px;
-    box-sizing: border-box;
+/*    box-sizing: border-box;
     border-style: solid;
-    border-color: red;
+    border-color: red;*/
 }
 
 
-.skills h1{
+.skills-blocos{
+    position: absolute;
+    top: 28%;
+    left: 10%;    
+    /*box-sizing: border-box;
+    border-style: solid;
+    border-color: green;*/
+}
+
+.skills .tituloSkills{
+    width: auto;
     font-size: 32px;
-    margin-top: 10px;
-    text-align: center;
+    margin-left: 45%;
+    margin-top: 28px;
+    height: 38px;
 }
 
-.skills .skills-html{
-    display: inline-block;
+.skills ul{
+    list-style-type: none;
+}
+
+.skills ul li{
+    display: inline-block;    
+}
+
+.skills ul li i{
+    font-size: 45px;        
+}
+
+.skills .skills-html{          
     width: 176px;
     height: 174px;
     padding: 16px 0px 0px 0px;
     gap: 8px;
     opacity: 0px;
-    background-color: #1ec3ea;
+    /*background-color: #1ec3ea;*/
+    background-color: #e9f1f8;
+    border-style: solid;
+    box-sizing: border-box;
+    border-color: #1ec3ea;
+    border-radius: 4%;
+    box-shadow: 0px 0px 15px 2px  teal;
+}
+
+.skills .skills-css{    
+    width: 176px;
+    height: 174px;
+    padding: 16px 0px 0px 0px;
+    gap: 8px;
+    opacity: 0px;
+    /*background-color: #1ec3ea;*/
+    background-color: #e9f1f8;
+    border-style: solid;
+    box-sizing: border-box;
+    border-color: #1ec3ea;
+    border-radius: 4%;
+    box-shadow: 0px 0px 15px 2px  teal;
+}
+
+.skills .skills-php{    
+    width: 176px;
+    height: 174px;
+    padding: 16px 0px 0px 0px;
+    gap: 8px;
+    opacity: 0px;
+    /*background-color: #1ec3ea;*/
+    background-color: #e9f1f8;
+    border-style: solid;
+    box-sizing: border-box;
+    border-color: #1ec3ea;
+    border-radius: 4%;
+    box-shadow: 0px 0px 15px 2px  teal;
+}
+
+.skills .skills-java{    
+    width: 176px;
+    height: 174px;
+    padding: 16px 0px 0px 0px;
+    gap: 8px;
+    opacity: 0px;
+    /*background-color: #1ec3ea;*/
+    background-color: #e9f1f8;
+    border-style: solid;
+    box-sizing: border-box;
+    border-color: #1ec3ea;
+    border-radius: 4%;
+    box-shadow: 0px 0px 15px 2px  teal;
+}
+
+.skills .skills-blocos  span{
+    background-color: #e9f1f8;
+    display: inline;
+    margin-left: 2px;
+    font-size: 20px;
+}
+
+.skills .skills-blocos .skills-icon{
+    position: relative;
+    top: 100px;
+    margin-left: 4px;
+    background-color: #e9f1f8;
 }
