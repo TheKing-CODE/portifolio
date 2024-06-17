@@ -147,10 +147,30 @@ a:hover{
     color: #dad6ca;
 }
 
-.skills{
+.skills{    
+    margin: auto;    
     width: 1136px;
     height: 244px;
     gap: 32px;
     opacity: 0px;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: red;
+}
 
+
+.skills h1{
+    font-size: 32px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.skills .skills-html{
+    display: inline-block;
+    width: 176px;
+    height: 174px;
+    padding: 16px 0px 0px 0px;
+    gap: 8px;
+    opacity: 0px;
+    background-color: #1ec3ea;
 }
