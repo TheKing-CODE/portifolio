@@ -156,7 +156,7 @@ a:hover{
     height: 400px;
     gap: 32px;
     opacity: 0px;
-/*    box-sizing: border-box;
+    /*box-sizing: border-box;
     border-style: solid;
     border-color: red;*/
 }
@@ -259,6 +259,143 @@ a:hover{
 }
 
 .skills .skills-blocos .skills-icon{
+    position: relative;
+    top: 100px;
+    margin-left: 4px;
+    background-color: #e9f1f8;
+}
+
+
+/*Novo*/ 
+
+.hobbies{    
+    display: flex;
+    position: relative;
+    justify-content: space-between;    
+    margin: auto;    
+    width: 1200px;
+    height: 400px;
+    gap: 32px;
+    opacity: 0px;
+    /*box-sizing: border-box;
+    border-style: solid;
+    border-color: red;*/
+}
+
+
+.hobbies-blocos{
+    position: absolute;
+    top: 28%;
+    left: 3.5%;    
+    /*box-sizing: border-box;
+    border-style: solid;
+    border-color: green;*/
+}
+
+.hobbies .tituloHobbies{
+    width: auto;
+    font-size: 32px;
+    margin-left: 45%;
+    margin-top: 28px;
+    height: 38px;
+}
+
+.hobbies ul{
+    list-style-type: none;
+}
+
+.hobbies ul li{
+    display: inline-block;    
+}
+
+.hobbies ul li i{
+    font-size: 45px;        
+}
+
+.hobbies .hobbie-leitura{          
+    width: 176px;
+    height: 174px;
+    padding: 16px 0px 0px 0px;
+    gap: 8px;
+    opacity: 0px;
+    /*background-color: #1ec3ea;*/
+    background-color: #e9f1f8;
+    border-style: solid;
+    box-sizing: border-box;
+    border-color: #1ec3ea;
+    border-radius: 4%;
+    box-shadow: 0px 0px 15px 2px  teal;
+}
+
+.hobbies .hobbie-Corridar{          
+    width: 176px;
+    height: 174px;
+    padding: 16px 0px 0px 0px;
+    gap: 8px;
+    opacity: 0px;
+    /*background-color: #1ec3ea;*/
+    background-color: #e9f1f8;
+    border-style: solid;
+    box-sizing: border-box;
+    border-color: #1ec3ea;
+    border-radius: 4%;
+    box-shadow: 0px 0px 15px 2px  teal;
+}
+
+.hobbies .hobbie-Ciclismo{          
+    width: 176px;
+    height: 174px;
+    padding: 16px 0px 0px 0px;
+    gap: 8px;
+    opacity: 0px;
+    /*background-color: #1ec3ea;*/
+    background-color: #e9f1f8;
+    border-style: solid;
+    box-sizing: border-box;
+    border-color: #1ec3ea;
+    border-radius: 4%;
+    box-shadow: 0px 0px 15px 2px  teal;
+}
+
+.hobbies .hobbie-Podcast{          
+    width: 176px;
+    height: 174px;
+    padding: 16px 0px 0px 0px;
+    gap: 8px;
+    opacity: 0px;
+    /*background-color: #1ec3ea;*/
+    background-color: #e9f1f8;
+    border-style: solid;
+    box-sizing: border-box;
+    border-color: #1ec3ea;
+    border-radius: 4%;
+    box-shadow: 0px 0px 15px 2px  teal;
+}
+
+.hobbies .hobbie-gamer{          
+    width: 176px;
+    height: 174px;
+    padding: 16px 0px 0px 0px;
+    gap: 8px;
+    opacity: 0px;
+    /*background-color: #1ec3ea;*/
+    background-color: #e9f1f8;
+    border-style: solid;
+    box-sizing: border-box;
+    border-color: #1ec3ea;
+    border-radius: 4%;
+    box-shadow: 0px 0px 15px 2px  teal;
+}
+
+.hobbies .hobbies-blocos  span{
+    background-color: #e9f1f8;
+    display: inline;
+    margin-left: 2px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.hobbies .hobbies-blocos .hobbies-icon{
     position: relative;
     top: 100px;
     margin-left: 4px;
