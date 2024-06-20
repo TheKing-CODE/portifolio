@@ -1,3 +1,15 @@
+@keyframes rotacao{
+    from {
+        transform: rotate(0deg);                
+        border-color: #17f9ff;
+    }
+    to {
+        transform: rotate(360deg);                
+        border-color: #17f9ff;
+    }
+
+}
+
 *{
 	margin: 0;
     padding: 0;    
@@ -67,9 +79,9 @@ a:hover{
     opacity: 0px;
     margin-top: 60px;        
     padding-top: 5%;
-    box-sizing: border-box;
+    /*box-sizing: border-box;
     border-style: solid;
-    border-color: red;
+    border-color: red;*/
     padding: 0px;
 }
 
@@ -106,38 +118,67 @@ a:hover{
     color: #17f9ff;
 }
 
+.circle-image-frente{
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 100%;
+	/*border-style: solid;
+	border-color: #17f9ff;
+    border-style: dotted;
+    border-width: 8px;*/
+    width: 300px;
+    height: 300px;
+    margin-top: 10px;
+    box-shadow: 0px 0px 15px 6px  teal;    
+}
+
+.bordas{
+    position: relative;
+    top: -328px;
+    left: -8px;
+    border-radius: 100%;
+	border-style: solid;
+	border-color: #17f9ff;
+    border-style: dotted;
+    border-width: 8px;
+    width: 300px;
+    height: 300px;
+    margin-top: 10px;    
+    animation-name: rotacao;            
+    animation-duration: 60s;    
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+
 .circle-image{
     display: inline-block;
     vertical-align: middle;
     border-radius: 100%;
-	border-style: solid;
+	/*border-style: solid;
 	border-color: #17f9ff;
+    border-style: dotted;
+    border-width: 8px;*/
     width: 300px;
     height: 300px;
     margin-top: 10px;
     gap: 0px;
-    opacity: 0px;
-    box-shadow: 0px 0px 15px 2px  teal;
+    opacity: 0px;        
 }
 
 
 .sobre{    
     width: 100%;
     height: 430px;
-    background-color: #4f8699;            
-    /*border-style: solid;
-    border-color: green;*/
-    
+    background-color: #4f8699;                    
 }
 
 .sobre .sobre-mim{    
     width: 1136px;
     height: 255px;
     margin: auto;            
-    background-color: #4f8699;    
-    /*border-style: solid;
-    border-color: red;
-    box-sizing: border-box;    */
+    background-color: #4f8699;        
     padding-top: 4%;
     margin-top: 5%;
 }
@@ -472,16 +513,16 @@ a:hover{
     margin-top: 60px;
     width: 1140px;    
     height: 508px;          
-    border-style: solid;
+    /*border-style: solid;
     box-sizing: border-box;    
-    border-color: darkblue;
+    border-color: darkblue;*/
 }
 
 .projetos .projeto{    
     position: relative;
     top: -48px;
     /*left: 15px;*/    
-    width: 1140px;
+    width: 1146px;
     height: 390px;
     gap: 24px;
     opacity: 0px;
@@ -498,6 +539,7 @@ a:hover{
 
 .projetos .projeto .circle-image{
     border-radius: 5%;   
+    margin-left: 4px;
 }
 
 .projetos .projeto .texto-bloco{
@@ -521,13 +563,11 @@ a:hover{
 }
 
 .projetos .projeto .titulo-skills{
-    position: relative;
-    
+    position: relative;    
     left: 35%;    
     text-align: center;
     font-weight: bold;
-    font-size: 22px;
-    
+    font-size: 22px;    
 }
 
 .projetos .projeto .projeto-skills .skills .icon-skills{
@@ -547,17 +587,23 @@ a:hover{
 .projetos .projeto .projeto-links{
     position: relative;
     top: -27%;
-    left: 10%;
+    left: 12%;
     width: 50px;    
     /*box-sizing: border-box;
     border-style: solid;
     border-color: yellow;    */
 }
 
-
-
 .projetos .projeto .projeto-links .links ul li i{    
     font-size: 35px;            
+}
+
+.contatos{
+
+}
+
+.contatos .formulario-contato{
+
 }
 
 

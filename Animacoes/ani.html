@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animação Completa</title>
+    <style>
+        @keyframes moveRight {
+            /*0% {
+                box-shadow: 5px 5px 1px green;                
+            }
+            25% {
+                box-shadow: -5px 5px 1px green;                                
+            }
+            50% {
+                box-shadow: -5px -5px 1px green;
+            }
+            75%{
+                box-shadow: 5px -5px 1px green;
+            }
+            100%{
+                box-shadow: 5px 5px 1px green;
+            }*/
+
+        }
+
+        @keyframes rotacao{
+
+                from {
+         transform: rotate(0deg);
+         color: darkred;
+    }
+    to {
+      transform: rotate(360deg);
+      color: darkred;
+    }
+
+        }
+
+        /*.box {
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            margin: auto;
+            position: relative;      
+            top: 250px;      
+            background-color: yellow;
+            box-shadow: 5px 5px 10px green;
+            animation-name: moveRight;            
+            animation-duration: 4s;    
+            animation-timing-function: linear;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+        } */   
+        .frente{
+            width: 100px;
+            height: 100px;
+            border-style: dotted;;;
+            border-radius: 100%;
+            margin: auto;
+            position: relative;                  
+            top: 146px;       
+            background-color: black;
+            animation-name: rotacao;            
+            animation-duration: 4s;    
+            animation-timing-function: linear;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+        }    
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="frente"></div>
+</body>
+</html>
