@@ -21,7 +21,7 @@
                 <li><a href="#formacao">FORMAÇÃO</a></li>
                 <li><a href="#projetos">PROJETOS</a></li>
                 <li><a href="#contatos">CONTATOS</a></li>
-                <li><a href="https://www.figma.com/design/Mv4mSxBHzB5caI7bW2tLv6/Challenge-Front-end-Portf%C3%B3lio?node-id=0-1">FIGMA</a></li>
+                
             </ul>
         </nav>
     </header>
@@ -38,20 +38,19 @@
                         <li><a href="https://github.com/TheKing-CODE">GITHUB <i class="fa-solid fa-arrow-right fa-rotate-by" style="color: #1bb0ce; --fa-rotate-angle: 315deg;"></i></a></li>
                         <li><a href="https://www.linkedin.com/in/christiandevallan/">LINKEDIN <i class="fa-solid fa-arrow-right fa-rotate-by" style="color: #1bb0ce; --fa-rotate-angle: 315deg;"></i></a></li>
                         <li><a href="https://www.instagram.com/thecode.ltda/">INSTAGRAM <i class="fa-solid fa-arrow-right fa-rotate-by" style="color: #1bb0ce; --fa-rotate-angle: 315deg;"></i></a></li>
-                        <li><a href="#formacao">CURRÍCULO <i class="fa-solid fa-arrow-right fa-rotate-by" style="color: #1bb0ce; --fa-rotate-angle: 315deg;"></i></a></li>                        
+                        <li><a href="Doc/cur.pdf">CURRÍCULO <i class="fa-solid fa-arrow-right fa-rotate-by" style="color: #1bb0ce; --fa-rotate-angle: 315deg;"></i></a></li>                        
                     </ul>    
                 </div>                
             </div>
             <div class="circle-image-frente" id="frente">                
                 <img src="Img/persona.svg" alt="Imagem Circular" class="circle-image"> 
-                <div class="bordas">
-                </div>    
+                <div class="bordas"></div>    
             </div>
             
         </div>
         <div class="sobre" id="sobre">
             <div class="sobre-mim" id="sobre-mim">                
-                <h1 class="tituloSobre" style="background-color: #4f8699; font-size: 55px; color: #dad6ca;">Sobre mim</h1>
+                <h1 class="tituloSobre" style="font-size: 55px; color: #dad6ca;">Sobre mim</h1>
                 <p class="paragrafo1">
                     Iniciei minha jornada como programador aprendendo Delphi. Atualmente, estou estudando dev. web. Espicificamente: PHP e tecnologias front-end.
                     <br/>                    
@@ -184,8 +183,8 @@
                     <h2 class="tituloProjeto" style="text-align: center; margin-bottom: 8px;" >Gestor de Tarefas</h2>                
                     <p class="msg1">Com esse gestor de tarefas e possível criar, consultar e excluir tarefas apenas por <br/>
                         linhas de comandos. <br/>
-                        O back-end está sendo desenvolvido apenas por PHP e o front está sendo desenvolvido <br/> 
-                        utilizando html+css.
+                        O back-end está sendo desenvolvido apenas por PHP e o front está sendo<br/> 
+                        desenvolvido utilizando html+css.
                     </p>
                 </div>    
                 <div class="projeto-skills">                    
@@ -194,10 +193,10 @@
                         <div class="icon-skills">
                             <ul>
                                 <li>
-                                    <i class="fa-brands fa-css3-alt" style="color: black; background-color: #4f8699; padding-left: 4px"></i>
+                                    <i class="fa-brands fa-css3-alt" style="color: #999966; padding-left: 4px"></i>
                                 </li>
                                 <li>
-                                    <i class="fa-brands fa-php" style="color: black; background-color: #4f8699; padding-left: 4px;"></i>
+                                    <i class="fa-brands fa-php" style="color: #999966; padding-left: 4px;"></i>
                                 </li>
                             </ul>
                         </div>    
@@ -206,22 +205,64 @@
                 <div class="projeto-links">                    
                     <div class="links">
                         <ul>
-                            <li><a href="https://google.com"><i class="fa-brands fa-github" style="color: #999966; "></i></a></li>                                                        
+                            <li><a href="https://github.com/TheKing-CODE/portifolio"><i class="fa-brands fa-github" ></i></a></li>                                                      
                         </ul>
                     </div>
                 </div>
             </div>
         </div>    
         <div class="contatos" id="contatos">
-            <div class="formulario-contato">
-                
+            <h1 class="tituloContato">Contato</h1>            
+            <img src="Img/persona.svg" alt="Imagem Circular" class="img">             
+            <div class="formulario-contato">                
+                <form class="formulario" action="" method="post">     
+                        <label for="nome">Nome:</label><br>
+                        <input type="text" id="nome" name="nome" required><br><br>
+        
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" name="email" required><br><br>
+        
+                        <label for="mensagem">Mensagem:</label><br>
+                        <textarea id="mensagem" name="mensagem" required></textarea><br><br>
+        
+                        <input type="submit" value="Enviar">
+                 </form>    
             </div>    
         </div>
     </main>
     <footer>
-
+        <p style="text-align: center;">&copy; 2024 AllanCh. Todos os direitos reservados.</p>     
     </footer>
 </body>
 </html>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Sanitize inputs to prevent injection attacks
+    $nome = htmlspecialchars($_POST['nome']);
+    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+    $mensagem = htmlspecialchars($_POST['mensagem']);
+
+    // Configurações para o email
+    $para = "allantecchristain25@gmail.com"; // Substitua pelo seu endereço de email
+    $assunto = "Mensagem do formulário de contato";
+    $mensagem_email = "Nome: $nome\n";
+    $mensagem_email .= "Email: $email\n\n";
+    $mensagem_email .= "Mensagem:\n$mensagem\n";
+
+    $headers = "From: $email\r\n";
+    $headers .= "Reply-To: $email\r\n";
+    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+
+    // Envio do email
+    if (mail($para, $assunto, $mensagem_email, $headers)) {
+        echo "Email enviado com sucesso!";
+    } else {
+        echo "Erro ao enviar o email.";
+    }
+} else {
+    echo "Ocorreu um erro ao processar o formulário.";
+}
+?>
          
 
