@@ -7,12 +7,34 @@
         transform: rotate(360deg);                
         border-color: #17f9ff;
     }
-
 }
+
+/*@keyframes testando{
+    from {
+        transform: rotate(0deg);                
+        border-color: #17f9ff;
+    }
+    to {
+        transform: rotate(360deg);                
+        border-color: #17f9ff;
+    }
+
+}*/
+
+/*
+@keyframes back{
+    0%{
+        opacity: 100%;
+    }100%{
+        opacity: 33%;
+    }
+}
+*/
 
 *{
 	margin: 0;
-    padding: 0;    
+    padding: 0; 
+
 }
 
 body{
@@ -20,7 +42,7 @@ body{
 }
 
 header{
-    display: flex;
+    display: flex;    
     justify-content: space-between;
     align-items: center;
     width: 1136px;    
@@ -115,7 +137,7 @@ a:hover{
 }
 
 .links ul li a:hover{
-    color: #17f9ff;
+    color: #1ec3ea;
 }
 
 .circle-image-frente{
@@ -171,15 +193,20 @@ a:hover{
 .sobre{    
     width: 100%;
     height: 430px;
-    background-color: #4f8699;                    
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(79,134,153,1) 0%, rgba(79,134,112,1) 100%);
+    /*background-color: #4f8699;       */
+    /*border-style: solid;
+    border-color: red;             
+    box-sizing: border-box;*/
 }
 
 .sobre .sobre-mim{    
     width: 1136px;
     height: 255px;
-    margin: auto;            
-    background-color: #4f8699;        
-    padding-top: 4%;
+    margin: auto;                
+    /*background-color: #4f8699;   */     
+    padding-top: 3%;
     margin-top: 5%;
 }
 
@@ -188,7 +215,7 @@ a:hover{
     margin-top: 12px;    
     font-size: 22px;        
     font-family: 'Raleway';     
-    background-color: #4f8699;
+    /*background-color: #4f8699;*/
     color: #dad6ca;
 }
 
@@ -199,9 +226,7 @@ a:hover{
     margin: auto;    
     width: 1136px;
     height: 400px;
-    gap: 32px;
-    opacity: 0px;
-    /*box-sizing: border-box;
+/*    box-sizing: border-box;
     border-style: solid;
     border-color: red;*/
 }
@@ -211,6 +236,8 @@ a:hover{
     position: absolute;
     top: 28%;
     left: 10%;    
+    animation-name: back;
+    animation-timeline: scroll();
     /*box-sizing: border-box;
     border-style: solid;
     border-color: green;*/
@@ -331,7 +358,9 @@ a:hover{
 .hobbies-blocos{
     position: absolute;
     top: 28%;
-    left: 3.5%;    
+    left: 3.5%;
+    animation-name: back;
+    animation-timeline: scroll();    
     /*box-sizing: border-box;
     border-style: solid;
     border-color: green;*/
@@ -462,7 +491,9 @@ a:hover{
     /*box-sizing: border-box;
     border-style: solid;
     border-color: red;*/
-    background-color: #4f8699;
+    /*background-color: #4f8699;*/
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(79,134,153,1) 0%, rgba(79,134,112,1) 100%);
     color: #dad6ca;
 }
 
@@ -479,9 +510,9 @@ a:hover{
     width: auto;
     font-size: 32px;
     margin-left: 39%;
-    margin-top: 40px;
+    margin-top: 48px;
     height: 38px;
-    background-color: #4f8699;
+    /*background-color: #4f8699;*/
 }
 
 .formacao ul{
@@ -513,7 +544,7 @@ a:hover{
     margin-top: 60px;
     width: 1140px;    
     height: 508px;          
-    /*border-style: solid;
+/*    border-style: solid;
     box-sizing: border-box;    
     border-color: darkblue;*/
 }
@@ -522,17 +553,16 @@ a:hover{
     position: relative;
     top: -48px;
     /*left: 15px;*/    
-    width: 1146px;
+    width: 1135px;
     height: 390px;
-    gap: 24px;
-    opacity: 0px;
     margin-top: 60px;        
     padding-top: 5%;
-    background-color: #4f8699;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(79,134,153,1) 0%, rgba(79,134,112,1) 100%);
     color: #dad6ca;
     box-sizing: border-box;
     border-style: solid;
-    border-radius: 3%;
+    border-radius: 1%;
     border-color: #4f8699;
     padding: 0px;
 }
@@ -596,16 +626,102 @@ a:hover{
 
 .projetos .projeto .projeto-links .links ul li i{    
     font-size: 35px;            
+    color: #999966;
 }
 
-.contatos{
+.projetos .projeto .projeto-links .links ul li i:hover{    
+    position: relative;
+    left: -10%;
+    font-size: 40px;        
+    color: #1ec3ea;    
+}
 
+.contatos{    
+    margin: auto;
+    margin-top: 15px;
+    width: 1140px;    
+    height: 508px;          
+    border-style: solid;
+    box-sizing: border-box;    
+    background-color: rgba(79, 134, 153, 0.5);
+}
+
+.contatos .tituloContato{
+    position: relative;
+    top: 4%;
+    text-align: center;
+}
+
+.contatos .img{
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    top: 45px;  
+    left: 14.5%;
+    border-color: #17f9ff;
+    border-right: dotted;    
+    border-width: 8px;
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    gap: 0px;
+    opacity: 0px; 
 }
 
 .contatos .formulario-contato{
+    display: inline-block;
+    vertical-align: middle;
+    width: 420px;
+    height: 400px;
+    position: relative;
+    left: 20%;
+    top: 50px;
+}
+
+.contatos .formulario-contato .formulario label{
+    display: block;
+    margin-bottom: 1px;
+    font-size: 35px;
+    text-align: center;
+}
+
+.contatos .formulario-contato .formulario input[type="text"],input[type="email"],textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.contatos .formulario-contato .formulario input[type="submit"] {
+    width: 100%;
+    height: 100%;
+    padding: 1px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contatos .formulario-contato .formulario input[type="submit"]:hover {
+    background-color: #45a049;
 
 }
 
 
+footer{
+    
+    /*justify-content: space-between;*/
+    align-items: center;
+    height: auto;
+    width: 1136px;    
 
-
+   /* box-sizing: border-box;*/    
+    /*border-top: solid;
+    border-color: #563444;*/
+    padding: 32px 0;
+    padding-bottom: 0px;
+    margin: auto ;
+}
