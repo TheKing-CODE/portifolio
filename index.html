@@ -6,10 +6,13 @@
     <link rel="stylesheet" href="CSS/styles.css">
     <link rel="icon" href="Img/ImgSemFundo.png" type="image/x-PNG">
     <script src="https://kit.fontawesome.com/f0ac6751a1.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@1,9..40,326&display=swap" rel="stylesheet">
     <title>AllanCh</title>
 </head>
 <body>
-    <header>
+	<header>
         <div class="logo">
             AllanCh <img class="ImgLogo" src="Img/logo.svg" style="height: 45px; width: 45px; margin-bottom: 6px; display: inline-block; vertical-align: middle;"></img>
         </div>
@@ -20,18 +23,18 @@
                 <li><a href="#hobbies">HOBBIES</a></li>
                 <li><a href="#formacao">FORMAÇÃO</a></li>
                 <li><a href="#projetos">PROJETOS</a></li>
-                <li><a href="#contatos">CONTATOS</a></li>
-                
+                <li><a href="#contatos">CONTATOS</a></li>                
             </ul>
         </nav>
     </header>
-    <main>
+	<main>
+        <!-- inicio da introdução -->
         <div class="introducao" id="introducao">
             <div class="topo">       
-                <h1 class="msg1">Hello, my name is Allan and i build web pages<br/>                    
+                <h1 class="msg1">Hello, my name is Allan and i build web pages.                  
                 </h1>
-                <p class="msg2" id="msg2">Eu sou estudante da área de T.I com foco em programação e atualmente<br/>
-                   estou aprendendo Desenvolvimento Web.<br/> 
+                <p class="msg2" id="msg2">Eu sou estudante da área de T.I com foco em programação e atualmente
+                estou aprendendo Desenvolvimento Web.
                 </p>                
                 <div class="links" id="links">
                     <ul>
@@ -46,23 +49,28 @@
                 <img src="Img/persona.svg" alt="Imagem Circular" class="circle-image"> 
                 <div class="bordas"></div>    
             </div>
-            
-        </div>
+        </div>  
+        <!-- fim da introdução -->  
+
+        <!-- inicio do "sobre mim" -->
         <div class="sobre" id="sobre">
             <div class="sobre-mim" id="sobre-mim">                
-                <h1 class="tituloSobre" style="font-size: 55px; color: #dad6ca;">Sobre mim</h1>
+                <h1 class="tituloSobre" style="color: #FFFAFA;">Sobre mim</h1>
                 <p class="paragrafo1">
-                    Iniciei minha jornada como programador aprendendo Delphi. Atualmente, estou estudando dev. web. Espicificamente: PHP e tecnologias front-end.
-                    <br/>                    
+                    Iniciei minha jornada como programador aprendendo Delphi. Atualmente, estou estudando desenvolvimento web, especificamente PHP e tecnologias front-end.            
                     <br/>
-                    Atualmente, trabalho na "Via Inox Tramontina" como "Assistente Administrativo" minhas responsabilidades são diversas, exemplo: faturamento de pedidos, emissão e conferência de notas fiscais, recebimento e conferência de mercadorias, atendimento ao público. Entre outras tarefas<br/>
-                    <img class="ImgLogo" src="Img/logo.svg" style="height: 45px; width: 45px; margin-bottom: 6px; display: inline-block; vertical-align: middle; background-color: #4f8699;"></img>             
+                    Desde o primeiro contato com a tecnologia, por volta dos 12 anos, tive a certeza de que ela estaria presente na minha vida, tanto profissional quanto acadêmica.<br/>
+                    Lembro-me vividamente da explosão de emoções, sentimentos e ideias que tive ao abrir o Windows e teclar pela primeira vez.<br/>
+                    Hoje sou aspirante ao desenvolvimento web. Iniciando minha jornada aos poucos dentro do tempo disponível que tenho.
                 </p>                            
             </div>
-        </div>   
-
+            <div class="fig-img">
+                <img src="Img/persona.svg" alt="Imagem Circular" class="img">                     
+            </div>
+        </div>  
+        <!-- fim do "sobre mim" -->
         <div class="skills" id="skills">              
-        <h1 class="tituloSkills">Skills<h1>    
+        <h1 class="tituloSkills">Skills</h1>    
             <div class="skills-blocos">
                 <nav>
                 <ul>
@@ -70,7 +78,7 @@
                         <div class="skills-html">   
                             <div class="skills-icon">             
                                 <i class="fa-brands fa-html5" style="color: #1bb0ce; background-color: #e9f1f8; " ></i>        
-                                <span>Html</span>                    
+                                
                             </div>
                         </div>
                     </li>
@@ -78,7 +86,7 @@
                         <div class="skills-css">
                             <div class="skills-icon">             
                                 <i class="fa-brands fa-css3-alt" style="color: #1bb0ce; background-color: #e9f1f8;"></i>
-                                <span>CSS</span>      
+                                
                             </div>    
                         </div>
                     </li>
@@ -86,7 +94,7 @@
                         <div class="skills-php">
                             <div class="skills-icon"> 
                                 <i class="fa-brands fa-php" style="color: #1bb0ce; background-color: #e9f1f8;"></i>
-                                <span>Php</span>      
+                                
                             </div>
                         </div>
                     </li>
@@ -94,15 +102,16 @@
                         <div class="skills-java">
                             <div class="skills-icon"> 
                                 <i class="fa-brands fa-java" style="color: #1bb0ce; background-color: #e9f1f8;"></i>
-                                <span>Html</span>      
+                                
                             </div>
                         </div>
                     </li>
                 </ul>
                 </nav>
             </div>
-        </div>   
+        </div>
         
+        <!--inicio hobbies-->       
         <div class="hobbies" id="hobbies">
             <h1 class="tituloHobbies">Hobbies</h1>
             <div class="hobbies-blocos">
@@ -143,7 +152,7 @@
                         <li>
                             <div class="hobbie-gamer">
                                 <div class="hobbies-icon"> 
-                                    <i class="fa-solid fa-gamepad" style="color: #1bb0ce; background-color: #e9f1f8;"></i>                                                                                                                                                
+                                    <i class="fa-solid fa-gamepad" style="color: #1bb0ce; background-color: #e9f1f8;"></i>
                                     <span>Gamer</span>      
                                 </div>
                             </div>
@@ -169,100 +178,13 @@
                                     </figure>    
                                 </div>
                             </div>    
-                        </li>                                                                       
+                        </li>                               
                     </ul>
                 </nav>   
             </div>
-        </div>      
-
-        <div class="projetos" id="projetos">   
-            <h1 class="tituloProjetos" style="text-align: center; margin-bottom: 80px;">Projetos</h1>                    
-            <div class="projeto" id="projeto"> 
-                <img src="Img/projetoGestorTarefas.PNG" alt="Imagem Circular" class="circle-image">                  
-                <div class="texto-bloco">
-                    <h2 class="tituloProjeto" style="text-align: center; margin-bottom: 8px;" >Gestor de Tarefas</h2>                
-                    <p class="msg1">Com esse gestor de tarefas e possível criar, consultar e excluir tarefas apenas por <br/>
-                        linhas de comandos. <br/>
-                        O back-end está sendo desenvolvido apenas por PHP e o front está sendo<br/> 
-                        desenvolvido utilizando html+css.
-                    </p>
-                </div>    
-                <div class="projeto-skills">                    
-                    <div class="skills">
-                        <span class="titulo-skills">Skills</span>
-                        <div class="icon-skills">
-                            <ul>
-                                <li>
-                                    <i class="fa-brands fa-css3-alt" style="color: #999966; padding-left: 4px"></i>
-                                </li>
-                                <li>
-                                    <i class="fa-brands fa-php" style="color: #999966; padding-left: 4px;"></i>
-                                </li>
-                            </ul>
-                        </div>    
-                    </div>
-                </div>
-                <div class="projeto-links">                    
-                    <div class="links">
-                        <ul>
-                            <li><a href="https://github.com/TheKing-CODE/portifolio"><i class="fa-brands fa-github" ></i></a></li>                                                      
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>    
-        <div class="contatos" id="contatos">
-            <h1 class="tituloContato">Contato</h1>            
-            <img src="Img/persona.svg" alt="Imagem Circular" class="img">             
-            <div class="formulario-contato">                
-                <form class="formulario" action="" method="post">     
-                        <label for="nome">Nome:</label><br>
-                        <input type="text" id="nome" name="nome" required><br><br>
-        
-                        <label for="email">Email:</label><br>
-                        <input type="email" id="email" name="email" required><br><br>
-        
-                        <label for="mensagem">Mensagem:</label><br>
-                        <textarea id="mensagem" name="mensagem" required></textarea><br><br>
-        
-                        <input type="submit" value="Enviar">
-                 </form>    
-            </div>    
         </div>
-    </main>
-    <footer>
-        <p style="text-align: center;">&copy; 2024 AllanCh. Todos os direitos reservados.</p>     
-    </footer>
+
+    </main>  
 </body>
+<!-- 	<script src="Js/script.js"></script> -->
 </html>
-
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Sanitize inputs to prevent injection attacks
-    $nome = htmlspecialchars($_POST['nome']);
-    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-    $mensagem = htmlspecialchars($_POST['mensagem']);
-
-    // Configurações para o email
-    $para = "allantecchristain25@gmail.com"; // Substitua pelo seu endereço de email
-    $assunto = "Mensagem do formulário de contato";
-    $mensagem_email = "Nome: $nome\n";
-    $mensagem_email .= "Email: $email\n\n";
-    $mensagem_email .= "Mensagem:\n$mensagem\n";
-
-    $headers = "From: $email\r\n";
-    $headers .= "Reply-To: $email\r\n";
-    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
-
-    // Envio do email
-    if (mail($para, $assunto, $mensagem_email, $headers)) {
-        echo "Email enviado com sucesso!";
-    } else {
-        echo "Erro ao enviar o email.";
-    }
-} else {
-    echo "Ocorreu um erro ao processar o formulário.";
-}
-?>
-         
-
