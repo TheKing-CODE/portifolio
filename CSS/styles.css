@@ -9,32 +9,15 @@
     }
 }
 
-/*@keyframes testando{
-    from {
-        transform: rotate(0deg);                
-        border-color: #17f9ff;
-    }
-    to {
-        transform: rotate(360deg);                
-        border-color: #17f9ff;
-    }
 
-}*/
 
-/*
-@keyframes back{
-    0%{
-        opacity: 100%;
-    }100%{
-        opacity: 33%;
-    }
-}
-*/
-
-*{
+**{
 	margin: 0;
     padding: 0; 
+}
 
+html{
+    scroll-behavior: smooth;
 }
 
 body{
@@ -44,14 +27,15 @@ body{
 header{
     display: flex;    
     justify-content: space-between;
+    
     align-items: center;
-    width: 1136px;    
-   /* box-sizing: border-box;*/    
+    max-width: 1136px;       
     border-bottom: solid;
     border-color: #563444;
     padding: 32px 0;
     padding-bottom: 0px;
     margin: auto ;    
+
 }
 
 
@@ -76,35 +60,38 @@ a:hover{
 
 .logo{
     display: inline-block; 
-    vertical-align: middle;       
-  /*  border-style: solid;
-    box-sizing: border-box;*/
+    vertical-align: middle;         
+}
+
+
+/* fim do header*/
+
+main{
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: auto;    
 
 }
+
+/*início da introdução*/
 
 .introducao{
+    display: grid;
+    grid-template-rows: 1fr;    
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    max-width: 1140px;
+    min-width: 1fr;
     margin: auto;
     margin-top: 60px;
-    width: 1140px;    
-    height: 368px;          
-    /*border-style: solid;
-    box-sizing: border-box;*/
+    height: 100vh;
+    border-bottom: dotted;
+    border-size: 1px;
 }
 
-
-.topo{        
-    display: inline-block;
-    vertical-align: middle;
-    width: 751px;
-    height: 246px;
-    gap: 24px;
-    opacity: 0px;
-    margin-top: 60px;        
-    padding-top: 5%;
-    /*box-sizing: border-box;
-    border-style: solid;
-    border-color: red;*/
-    padding: 0px;
+.introducao .topo{
+    grid-area: 1 1;
+    
 }
 
 .topo .msg1 .msg2{
@@ -112,17 +99,63 @@ a:hover{
 }
 
 .topo .msg1{
-    font-size: 52px;
-    width: 700px;   
+    font-size: 5.3rem;
+    max-width: 700px;         
+    margin-bottom: 0px ;
+    
 }
 
-.topo .msg2{
-    font-size: 22px;
-    width: 400px;   
+.topo .msg2{    
+    font-size: 2rem;
+    max-width: 400px;  
+    
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
-.links ul{
-    margin-top: 20px;
+.introducao .circle-image-frente{
+    grid-area: 1 2;
+    display: flex;
+    justify-content: center;
+}
+
+.introducao .circle-image-frente .circle-image{
+    border-radius: 100%;    
+    border-color: #17f9ff;    
+    border-width: 8px;
+    max-width: 550px;
+    max-height: 550px;
+    box-shadow: 0px 0px 15px 6px  teal;   
+}
+
+.circle-image{  
+    width: 550px;
+    height: 550px;
+    border-width: 8px;
+}
+
+
+.bordas{
+    position: absolute;
+    top:22%;
+    border-radius: 100%;
+    border-style: solid;
+    border-color: #17f9ff;
+    border-style: dotted;
+    border-width: 8px;
+    width: 550px;
+    height: 550px;  
+    max-width: 550px;
+    max-height: 550px;    
+    animation-name: rotacao;            
+    animation-duration: 60s;    
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+
+.links ul{    
     list-style-type: none;        
 }
 
@@ -140,115 +173,80 @@ a:hover{
     color: #1ec3ea;
 }
 
-.circle-image-frente{
-    display: inline-block;
-    vertical-align: middle;
-    border-radius: 100%;
-	/*border-style: solid;
-	border-color: #17f9ff;
-    border-style: dotted;
-    border-width: 8px;*/
-    width: 300px;
-    height: 300px;
-    margin-top: 10px;
-    box-shadow: 0px 0px 15px 6px  teal;    
-}
+/*fim da introdução*/
 
-.bordas{
-    position: relative;
-    top: -328px;
-    left: -8px;
-    border-radius: 100%;
-	border-style: solid;
-	border-color: #17f9ff;
-    border-style: dotted;
-    border-width: 8px;
-    width: 300px;
-    height: 300px;
-    margin-top: 10px;    
-    animation-name: rotacao;            
-    animation-duration: 60s;    
-    animation-timing-function: linear;
-    animation-delay: 0s;
-    animation-iteration-count: infinite;
-    animation-direction: normal;
-}
 
-.circle-image{
-    display: inline-block;
-    vertical-align: middle;
-    border-radius: 100%;
-	/*border-style: solid;
-	border-color: #17f9ff;
-    border-style: dotted;
-    border-width: 8px;*/
-    width: 300px;
-    height: 300px;
-    margin-top: 10px;
-    gap: 0px;
-    opacity: 0px;        
-}
-
+/* Início de "sobre" */
 
 .sobre{    
-    width: 100%;
-    height: 430px;
-    background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(79,134,153,1) 0%, rgba(79,134,112,1) 100%);
-    /*background-color: #4f8699;       */
-    /*border-style: solid;
-    border-color: red;             
-    box-sizing: border-box;*/
-}
-
-.sobre .sobre-mim{    
-    width: 1136px;
-    height: 255px;
-    margin: auto;                
-    /*background-color: #4f8699;   */     
-    padding-top: 3%;
-    margin-top: 5%;
-}
-
-.sobre .sobre-mim .paragrafo1{
-    width: 800px;
-    margin-top: 12px;    
-    font-size: 22px;        
-    font-family: 'Raleway';     
-    /*background-color: #4f8699;*/
-    color: #dad6ca;
-}
-
-.skills{    
-    display: flex;
-    position: relative;
-    justify-content: space-between;    
+    display: grid;
+    grid-template-rows: 1fr;    
+    grid-template-columns: 1fr 1fr;    
+    max-width: 1140px;
+    min-width: 1fr;
     margin: auto;    
-    width: 1136px;
-    height: 400px;
-/*    box-sizing: border-box;
-    border-style: solid;
-    border-color: red;*/
+    height: 100vh;
+    margin: auto;
+    color: #FFFAFA;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(79,134,153,1) 0%, rgba(79,134,112,1) 100%);
 }
 
+.sobre .tituloSobre{
+    grid-area: 1 / 2 / 1 / 2;
+    margin-left: 5px;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 0px;
+}
 
-.skills-blocos{
-    position: absolute;
-    top: 28%;
-    left: 10%;    
-    animation-name: back;
-    animation-timeline: scroll();
-    /*box-sizing: border-box;
-    border-style: solid;
-    border-color: green;*/
+.sobre .paragrafo1{
+    grid-area: 1 / 2 / 1 / 2;
+    margin-left: 5px;
+    font-size: 2rem;
+}
+
+.sobre .fig-img{    
+    grid-area: 1 / 1 / 1 / 1;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    width: 550px;
+    height: auto;
+    
+}
+
+.sobre .fig-img .img{
+    border-right: dotted;
+    border-width: 1px;
+    grid-area: 1 / 1 / 1 / 1;
+    width: 550px;
+    height: 550px;
+}
+
+/*Fim do sobre*/
+
+
+
+.skills{
+    display: grid;
+    position: relative;
+    top: -25%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;    
+    width: 1140px;
+    max-width: 1140px;
+    min-width: 1fr;
+    height: auto;
+    margin: auto;       
 }
 
 .skills .tituloSkills{
-    width: auto;
-    font-size: 32px;
-    margin-left: 45%;
-    margin-top: 28px;
-    height: 38px;
+    text-align: center;
+}
+
+.skills .skills-blocos{
+    display: inline-grid;
+    justify-content: center;
 }
 
 .skills ul{
@@ -263,115 +261,67 @@ a:hover{
     font-size: 45px;        
 }
 
-.skills .skills-html{          
+.skills .skills-html,
+.skills .skills-css,
+.skills .skills-php,
+.skills .skills-java {    
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: flex-end;
     width: 176px;
     height: 174px;
-    padding: 16px 0px 0px 0px;
-    gap: 8px;
-    opacity: 0px;
-    /*background-color: #1ec3ea;*/
+    padding: 16px 0;
     background-color: #e9f1f8;
-    border-style: solid;
+    border: solid;
+    border-width: 1px; /* ou border-style: solid; */
     box-sizing: border-box;
     border-color: #1ec3ea;
     border-radius: 4%;
-    box-shadow: 0px 0px 15px 2px  teal;
-}
-
-.skills .skills-css{    
-    width: 176px;
-    height: 174px;
-    padding: 16px 0px 0px 0px;
-    gap: 8px;
-    opacity: 0px;
-    /*background-color: #1ec3ea;*/
-    background-color: #e9f1f8;
-    border-style: solid;
-    box-sizing: border-box;
-    border-color: #1ec3ea;
-    border-radius: 4%;
-    box-shadow: 0px 0px 15px 2px  teal;
-}
-
-.skills .skills-php{    
-    width: 176px;
-    height: 174px;
-    padding: 16px 0px 0px 0px;
-    gap: 8px;
-    opacity: 0px;
-    /*background-color: #1ec3ea;*/
-    background-color: #e9f1f8;
-    border-style: solid;
-    box-sizing: border-box;
-    border-color: #1ec3ea;
-    border-radius: 4%;
-    box-shadow: 0px 0px 15px 2px  teal;
-}
-
-.skills .skills-java{    
-    width: 176px;
-    height: 174px;
-    padding: 16px 0px 0px 0px;
-    gap: 8px;
-    opacity: 0px;
-    /*background-color: #1ec3ea;*/
-    background-color: #e9f1f8;
-    border-style: solid;
-    box-sizing: border-box;
-    border-color: #1ec3ea;
-    border-radius: 4%;
-    box-shadow: 0px 0px 15px 2px  teal;
+    box-shadow: 0 0 15px 2px teal;
 }
 
 .skills .skills-blocos  span{
+    
     background-color: #e9f1f8;
-    display: inline;
     margin-left: 2px;
     font-size: 20px;
+    font-weight: bold;
 }
 
-.skills .skills-blocos .skills-icon{
-    position: relative;
-    top: 100px;
-    margin-left: 4px;
-    background-color: #e9f1f8;
+.skills .skills-html:hover,
+.skills .skills-css:hover,
+.skills .skills-php:hover,
+.skills .skills-java:hover {
+    width: 180px;
+    height: 176px;
+    cursor: pointer;
 }
 
+/*Fim do Skils*/
 
-/*Novo*/ 
+/*hobbies   */
 
-.hobbies{    
-    display: flex;
-    position: relative;
-    justify-content: space-between;    
-    margin: auto;    
-    width: 1200px;
-    height: 400px;
-    gap: 32px;
-    opacity: 0px;
-    /*box-sizing: border-box;
-    border-style: solid;
-    border-color: red;*/
-}
-
-
-.hobbies-blocos{
-    position: absolute;
-    top: 28%;
-    left: 3.5%;
-    animation-name: back;
-    animation-timeline: scroll();    
-    /*box-sizing: border-box;
-    border-style: solid;
-    border-color: green;*/
+.hobbies{
+    display: grid;
+    position: relative;    
+    top: -79%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;    
+    width: 1140px;
+    max-width: 1140px;
+    min-width: 1fr;
+    height: auto;
+    margin: auto;   
 }
 
 .hobbies .tituloHobbies{
-    width: auto;
-    font-size: 32px;
-    margin-left: 45%;
-    margin-top: 28px;
-    height: 38px;
+    text-align: center;
+}
+
+.hobbies .hobbies-blocos{
+    display: inline-grid;
+    justify-content: center;
 }
 
 .hobbies ul{
@@ -386,342 +336,301 @@ a:hover{
     font-size: 45px;        
 }
 
-.hobbies .hobbie-leitura{          
-    width: 176px;
-    height: 174px;
-    padding: 16px 0px 0px 0px;
-    gap: 8px;
-    opacity: 0px;
-    /*background-color: #1ec3ea;*/
-    background-color: #e9f1f8;
-    border-style: solid;
-    box-sizing: border-box;
-    border-color: #1ec3ea;
-    border-radius: 4%;
-    box-shadow: 0px 0px 15px 2px  teal;
-}
-
-.hobbies .hobbie-Corridar{          
-    width: 176px;
-    height: 174px;
-    padding: 16px 0px 0px 0px;
-    gap: 8px;
-    opacity: 0px;
-    /*background-color: #1ec3ea;*/
-    background-color: #e9f1f8;
-    border-style: solid;
-    box-sizing: border-box;
-    border-color: #1ec3ea;
-    border-radius: 4%;
-    box-shadow: 0px 0px 15px 2px  teal;
-}
-
-.hobbies .hobbie-Ciclismo{          
-    width: 176px;
-    height: 174px;
-    padding: 16px 0px 0px 0px;
-    gap: 8px;
-    opacity: 0px;
-    /*background-color: #1ec3ea;*/
-    background-color: #e9f1f8;
-    border-style: solid;
-    box-sizing: border-box;
-    border-color: #1ec3ea;
-    border-radius: 4%;
-    box-shadow: 0px 0px 15px 2px  teal;
-}
-
-.hobbies .hobbie-Podcast{          
-    width: 176px;
-    height: 174px;
-    padding: 16px 0px 0px 0px;
-    gap: 8px;
-    opacity: 0px;
-    /*background-color: #1ec3ea;*/
-    background-color: #e9f1f8;
-    border-style: solid;
-    box-sizing: border-box;
-    border-color: #1ec3ea;
-    border-radius: 4%;
-    box-shadow: 0px 0px 15px 2px  teal;
-}
-
-.hobbies .hobbie-gamer{          
-    width: 176px;
-    height: 174px;
-    padding: 16px 0px 0px 0px;
-    gap: 8px;
-    opacity: 0px;
-    /*background-color: #1ec3ea;*/
-    background-color: #e9f1f8;
-    border-style: solid;
-    box-sizing: border-box;
-    border-color: #1ec3ea;
-    border-radius: 4%;
-    box-shadow: 0px 0px 15px 2px  teal;
-}
-
-.hobbies .hobbies-blocos  span{
-    background-color: #e9f1f8;
-    display: inline;
-    margin-left: 2px;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.hobbies .hobbies-blocos .hobbies-icon{
-    position: relative;
-    top: 100px;
-    margin-left: 4px;
-    background-color: #e9f1f8;
-}
-
-
-/*Novo*/
-
-.formacao{    
+.hobbies .hobbie-leitura,
+.hobbies .hobbie-Corridar,
+.hobbies .hobbie-Ciclismo,
+.hobbies .hobbie-Podcast,
+.hobbies .hobbie-gamer {    
     display: flex;
-    position: relative;
-    justify-content: space-between;    
-    margin: auto;    
-    width: 100%;
-    height: 500px;
-    gap: 32px;
-    opacity: 0px;
-    /*box-sizing: border-box;
-    border-style: solid;
-    border-color: red;*/
-    /*background-color: #4f8699;*/
-    background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(79,134,153,1) 0%, rgba(79,134,112,1) 100%);
-    color: #dad6ca;
-}
-
-.formacao-blocos{
-    position: absolute;
-    top: 25%;
-    left: 40%;        
-/*    box-sizing: border-box;
-    border-style: solid;
-    border-color: green;*/
-}
-
-.formacao .tituloFormacao{
-    width: auto;
-    font-size: 32px;
-    margin-left: 39%;
-    margin-top: 48px;
-    height: 38px;
-    /*background-color: #4f8699;*/
-}
-
-.formacao ul{
-    list-style-type: none;
-}
-
-.formacao ul li{
-    display: inline-block;    
-}
-
-.formacao .formacao-blocos .formacao-faculdade .formacao-icon .formacao-icon-ifs{
-    width: 270px;
-    height: 270px;
-    padding: 16px 0px 0px 0px;
-    gap: 8px;    
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: flex-end;
+    width: 166px;
+    height: 164px;
+    padding: 16px 0;
     background-color: #e9f1f8;
-    border-style: solid;
+    border: solid;
+    border-width: 1px; /* ou border-style: solid; */
     box-sizing: border-box;
     border-color: #1ec3ea;
     border-radius: 4%;
-    /*box-shadow: 0px 0px 15px 2px  teal;*/
+    box-shadow: 0 0 15px 2px teal;
 }
 
 
-/*Novo*/
-
-.projetos{
-    margin: auto;
-    margin-top: 60px;
-    width: 1140px;    
-    height: 508px;          
-/*    border-style: solid;
-    box-sizing: border-box;    
-    border-color: darkblue;*/
-}
-
-.projetos .projeto{    
-    position: relative;
-    top: -48px;
-    /*left: 15px;*/    
-    width: 1135px;
-    height: 390px;
-    margin-top: 60px;        
-    padding-top: 5%;
-    background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(79,134,153,1) 0%, rgba(79,134,112,1) 100%);
-    color: #dad6ca;
-    box-sizing: border-box;
-    border-style: solid;
-    border-radius: 1%;
-    border-color: #4f8699;
-    padding: 0px;
-}
-
-.projetos .projeto .circle-image{
-    border-radius: 5%;   
-    margin-left: 4px;
-}
-
-.projetos .projeto .texto-bloco{
-    display: inline-block;
-    position: relative;
-    left: 10px;
-    font-size: 22px;
-    font-weight: bold;
-    vertical-align: middle;
-/*    box-sizing: border-box;
-    border-style: solid;
-    border-color: green;*/
-}
-
-.projetos .projeto .projeto-skills .skills{    
-    position: relative;
-    top: -55px;
-    left: 140px;
-    height: 100px;
-    width: 180px;
-}
-
-.projetos .projeto .titulo-skills{
-    position: relative;    
-    left: 35%;    
-    text-align: center;
-    font-weight: bold;
-    font-size: 22px;    
-}
-
-.projetos .projeto .projeto-skills .skills .icon-skills{
-    position: relative;
-    top: 30px;
-    left: -30%;
-    height: 50px;
-    /*box-sizing: border-box;
-    border-style: solid;
-    border-color: green;*/    
-}
-
-.projetos .projeto .projeto-skills .skills ul li i{
-    font-size: 35px;            
-}
-
-.projetos .projeto .projeto-links{
-    position: relative;
-    top: -27%;
-    left: 12%;
-    width: 50px;    
-    /*box-sizing: border-box;
-    border-style: solid;
-    border-color: yellow;    */
-}
-
-.projetos .projeto .projeto-links .links ul li i{    
-    font-size: 35px;            
-    color: #999966;
-}
-
-.projetos .projeto .projeto-links .links ul li i:hover{    
-    position: relative;
-    left: -10%;
-    font-size: 40px;        
-    color: #1ec3ea;    
-}
-
-.contatos{    
-    margin: auto;
-    margin-top: 15px;
-    width: 1140px;    
-    height: 508px;          
-    border-style: solid;
-    box-sizing: border-box;    
-    background-color: rgba(79, 134, 153, 0.5);
-}
-
-.contatos .tituloContato{
-    position: relative;
-    top: 4%;
-    text-align: center;
-}
-
-.contatos .img{
-    display: inline-block;
-    vertical-align: middle;
-    position: relative;
-    top: 45px;  
-    left: 14.5%;
-    border-color: #17f9ff;
-    border-right: dotted;    
-    border-width: 8px;
-    width: 400px;
-    height: 400px;
-    object-fit: cover;
-    gap: 0px;
-    opacity: 0px; 
-}
-
-.contatos .formulario-contato{
-    display: inline-block;
-    vertical-align: middle;
-    width: 420px;
-    height: 400px;
-    position: relative;
-    left: 20%;
-    top: 50px;
-}
-
-.contatos .formulario-contato .formulario label{
-    display: block;
-    margin-bottom: 1px;
-    font-size: 35px;
-    text-align: center;
-}
-
-.contatos .formulario-contato .formulario input[type="text"],input[type="email"],textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 1px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-.contatos .formulario-contato .formulario input[type="submit"] {
-    width: 100%;
-    height: 100%;
-    padding: 1px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
+.hobbies .hobbie-leitura:hover,
+.hobbies .hobbie-Corridar:hover,
+.hobbies .hobbie-Ciclismo:hover,
+.hobbies .hobbie-Podcast:hover,
+.hobbies .hobbie-gamer:hover {
+    width: 170px;
+    height: 166px;
     cursor: pointer;
 }
 
-.contatos .formulario-contato .formulario input[type="submit"]:hover {
-    background-color: #45a049;
+/*Fim do hobbies*/
 
-}
-
-
-footer{
-    
-    /*justify-content: space-between;*/
-    align-items: center;
+.formacao{
+    display: grid;
+    position: relative;
+    top: -98%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;    
+    width: 1140px;
+    max-width: 1140px;
+    min-width: 1fr;
     height: auto;
-    width: 1136px;    
-
-   /* box-sizing: border-box;*/    
-    /*border-top: solid;
-    border-color: #563444;*/
-    padding: 32px 0;
-    padding-bottom: 0px;
-    margin: auto ;
+    margin: auto;    
+    color: #FFFAFA;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(79,134,153,1) 0%, rgba(79,134,112,1) 100%);
 }
+
+
+
+.formacao .tituloFormacao{
+    text-align: center;
+}
+
+.formacao .formacao-blocos{
+}
+
+.formacao .formacao-faculdade{
+    display: flex;
+    justify-content: center;
+}
+
+.formacao .formacao-icon{
+    width: 430px;
+    height: 426px;
+    padding: 16px 0;
+    background-color: #e9f1f8;
+    border: solid;
+    border-width: 1px; /* ou border-style: solid; */
+    box-sizing: border-box;
+    border-color: #1ec3ea;
+    border-radius: 4%;
+    box-shadow: 0 0 15px 2px teal;
+}
+
+.formacao .formacao-icon .formacao-icon-ifs{
+    width: 350px;
+    height: 350px;
+}
+
+.formacao .formacao-icon figcaption{
+    text-align: center;
+    color: black;
+}
+
+
+
+@media screen and (max-width: 768px){
+    header{
+        display: none;
+    }
+
+    /*início da introdução*/
+    .introducao{        
+        grid-template-rows: 1fr 1fr ;    
+        grid-template-columns: 1fr ; 
+        height: 100vh;
+    }
+
+    .introducao .circle-image-frente{
+        grid-area: 1 / 1 / 1 / 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;        
+
+    }
+
+    .introducao .topo{
+        grid-area: 2 1;
+    }
+
+    
+    .introducao .circle-image-frente .circle-image{
+        width: 350px;
+        height: 350px;
+
+    }
+
+    .introducao .bordas{
+        top:inherit;
+            width: 350px;
+        height: 350px;
+    }    
+
+    .topo .msg1 .msg2{
+        margin-top: 0px;
+        font-family: 'Raleway', Courier, monospace;
+        text-align: center;     
+    }
+
+    .topo .msg1{       
+        margin-top: 0px; 
+        width: 100%;
+        font-size: 42px;        
+    }
+
+    .topo .msg2{
+        font-size: 32px;   
+
+    }      
+
+    .links{
+        display: flex;
+        justify-content: flex-start;
+       
+    }
+
+    .links .ul{
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .links ul li{
+        text-align: center;
+        position: relative;
+        left: -5%;
+        font-size: 18px;  /**/
+
+    }  
+    /*fim da introdução*/
+
+    .sobre{
+        grid-template-columns: 1fr;        
+        width: 100%;
+        height: 100vh;
+    }
+
+    .sobre .tituloSobre{
+        font-size: 230%;
+    }
+
+    .sobre .paragrafo1{
+        font-size: 185%;  
+        font-weight: lighter;      
+    }
+
+    .sobre .fig-img{
+        display: none;
+    }
+    /*Fim do sobre*/
+
+    .skills{
+        align-content: start;        
+        
+        top: inherit;
+        margin: inherit;
+        width: 100%;
+        max-height: 310px;
+        min-height: auto;
+    }
+
+    .skills .skills-blocos{        
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;        
+    }
+
+    .skills .skills-html,
+    .skills .skills-css,
+    .skills .skills-php,
+    .skills .skills-java {    
+        display: flex;        
+        justify-content: center;        
+        width: 106px;
+        height: 100px;
+        margin-bottom: 10px;
+    }
+
+    .skills .skills-html, .skills-css{    
+        grid-area: 1 / 1 / 1 / 1;
+    }
+
+    .skills .skills-php, .skills-java{    
+        grid-area: 2 / 1 / 2 / 1;
+    }
+
+    /*Fim de Skills*/
+
+    .hobbies{
+        align-content: start;        
+        top: -59%;
+        
+        
+        margin: inherit;
+        width: 100%;
+        max-height: 470px;
+        min-height: auto;
+    }
+
+    .hobbies .hobbies-blocos{        
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;        
+    }
+
+    .hobbies .hobbie-leitura,
+    .hobbies .hobbie-Corridar,
+    .hobbies .hobbie-Ciclismo,
+    .hobbies .hobbie-Podcast,
+    .hobbies .hobbie-gamer {     
+        display: flex;        
+        justify-content: center;        
+        width: 106px;
+        height: 100px;
+        margin-bottom: 10px;
+    }
+    /*Fim do hobbies*/
+
+.formacao{
+    top: -125%;
+    width: 100%;
+}
+
+.formacao .tituloFormacao{
+    text-align: center;
+}
+
+.formacao .formacao-blocos{
+    width: 100%;
+    display: flex;
+    justify-items: center;
+
+}
+
+.formacao .formacao-faculdade{
+    display: flex;
+    justify-content: center;
+}
+
+.formacao .formacao-icon{
+    width: 300px;
+    height: 296px;
+    padding: 16px 0;
+    background-color: #e9f1f8;
+    border: solid;
+    border-width: 1px; /* ou border-style: solid; */
+    box-sizing: border-box;
+    border-color: #1ec3ea;
+    border-radius: 4%;
+    box-shadow: 0 0 15px 2px teal;
+}
+
+.formacao .formacao-icon .formacao-icon-ifs{
+    width: 200px;
+    height: 200px;
+}
+
+.formacao .formacao-icon figcaption{
+    text-align: center;
+    color: black;
+}
+
+html{
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+}   
+
