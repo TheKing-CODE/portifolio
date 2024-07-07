@@ -137,7 +137,7 @@ main{
 
 .bordas{
     position: absolute;
-    top:22%;
+    top:23%;
     border-radius: 100%;
     border-style: solid;
     border-color: #17f9ff;
@@ -202,7 +202,8 @@ main{
 .sobre .paragrafo1{
     grid-area: 1 / 2 / 1 / 2;
     margin-left: 5px;
-    font-size: 2rem;
+    
+    font-size: 1.9rem;
 }
 
 .sobre .fig-img{    
@@ -210,7 +211,8 @@ main{
     display: flex;
     justify-items: center;
     align-items: center;
-    width: 550px;
+    height: 100vh;
+    max-width: 550px;
     height: auto;
     
 }
@@ -220,7 +222,11 @@ main{
     border-width: 1px;
     grid-area: 1 / 1 / 1 / 1;
     width: 550px;
-    height: 550px;
+    height: 600px;
+}
+
+.fundo{
+    display: none;
 }
 
 /*Fim do sobre*/
@@ -506,68 +512,98 @@ main{
 
     .sobre .tituloSobre{
         font-size: 230%;
+        position: relative;
+        z-index: 1;
     }
 
     .sobre .paragrafo1{
         font-size: 185%;  
-        font-weight: lighter;      
+        font-weight: lighter;
+        position: relative;
+        z-index: 1;      
     }
 
     .sobre .fig-img{
         display: none;
     }
+
+    .sobre .fundo{
+    
+    }
     /*Fim do sobre*/
 
     .skills{
         align-content: start;        
-        
         top: inherit;
         margin: inherit;
         width: 100%;
-        max-height: 310px;
+        max-height: 359px;
         min-height: auto;
     }
 
-    .skills .skills-blocos{        
-        grid-template-rows: 1fr;
-        grid-template-columns: 1fr;        
+    .skills .skills-blocos{      
+        display: flex;  
+        position: relative;
+        top: -4%;             
+        justify-items: center;
+        align-items: center;   
     }
 
+    .skills .skills-blocos li{
+        margin-right: 0px;
+    }
+    
+    .skills .skills-html,
+    .skills .skills-php{
+        margin-right: 18px;
+        margin-left: 0px;
+    }
+    
     .skills .skills-html,
     .skills .skills-css,
     .skills .skills-php,
     .skills .skills-java {    
         display: flex;        
-        justify-content: center;        
-        width: 106px;
-        height: 100px;
-        margin-bottom: 10px;
+        justify-content: center;
+        max-width: 144px;
+        max-height: 134px;
+        margin-bottom: 8px;
     }
 
-    .skills .skills-html, .skills-css{    
-        grid-area: 1 / 1 / 1 / 1;
-    }
-
-    .skills .skills-php, .skills-java{    
-        grid-area: 2 / 1 / 2 / 1;
     }
 
     /*Fim de Skills*/
 
     .hobbies{
         align-content: start;        
-        top: -59%;
-        
-        
+        top: -55%;
         margin: inherit;
         width: 100%;
-        max-height: 470px;
+        max-height: 540px;
         min-height: auto;
     }
 
-    .hobbies .hobbies-blocos{        
-        grid-template-rows: 1fr;
-        grid-template-columns: 1fr;        
+    .hobbies .hobbies-blocos i{
+        font-size: 30px;
+    }
+
+    .hobbies .hobbies-blocos{       
+        display: flex; 
+        height: auto;
+        justify-content: center;
+        align-content: center;    
+    }
+
+    .hobbies .hobbies-blocos li{
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    .hobbies .hobbie-leitura,
+    .hobbies .hobbie-Ciclismo,
+    .hobbies .hobbie-Gamer{
+        margin-right: 18px;
+        margin-left: 0px;
     }
 
     .hobbies .hobbie-leitura,
@@ -577,14 +613,14 @@ main{
     .hobbies .hobbie-gamer {     
         display: flex;        
         justify-content: center;        
-        width: 106px;
-        height: 100px;
-        margin-bottom: 10px;
+        max-width: 144px;
+        max-height: 134px;
+        margin-bottom: 8px;
     }
     /*Fim do hobbies*/
 
 .formacao{
-    top: -125%;
+    top: -114%;
     width: 100%;
 }
 
