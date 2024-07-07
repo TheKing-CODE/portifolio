@@ -69,7 +69,8 @@ a:hover{
 main{
     display: grid;
     grid-auto-rows: 1fr;
-    grid-template-columns: auto;    
+    grid-template-columns: auto; 
+    justify-content: center;   
 
 }
 
@@ -310,15 +311,16 @@ main{
 
 .hobbies{
     display: grid;
-    position: relative;    
-    top: -79%;
+    position: relative;
+    top: -80%;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;    
     width: 1140px;
     max-width: 1140px;
     min-width: 1fr;
     height: auto;
-    margin: auto;   
+    border-style: solid;
+    margin: auto;       
 }
 
 .hobbies .tituloHobbies{
@@ -327,7 +329,7 @@ main{
 
 .hobbies .hobbies-blocos{
     display: inline-grid;
-    justify-content: center;
+    justify-content: center;    
 }
 
 .hobbies ul{
@@ -511,13 +513,17 @@ main{
     }
 
     .sobre .tituloSobre{
-        font-size: 230%;
+        font-size: 42px;
         position: relative;
         z-index: 1;
     }
 
     .sobre .paragrafo1{
-        font-size: 185%;  
+        display: flex;
+        justify-items: center;
+        width: 100%;
+        height: 100%;
+        font-size: 29px; 
         font-weight: lighter;
         position: relative;
         z-index: 1;      
@@ -568,8 +574,6 @@ main{
         max-width: 144px;
         max-height: 134px;
         margin-bottom: 8px;
-    }
-
     }
 
     /*Fim de Skills*/
@@ -667,6 +671,5 @@ html{
     margin-right: 0px;
     margin-left: 0px;
 }
-
-}   
+   
 
