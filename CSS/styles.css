@@ -1,3 +1,5 @@
+
+
 @keyframes rotacao{
     from {
         transform: rotate(0deg);                
@@ -21,13 +23,13 @@ html{
 }
 
 body{
-    background-color: #dad6ca;
+    background-color: #02031a;
+    /*#dad6ca*/
 }
 
 header{
     display: flex;    
-    justify-content: space-between;
-    
+    justify-content: space-between;    
     align-items: center;
     max-width: 1136px;       
     border-bottom: solid;
@@ -35,7 +37,7 @@ header{
     padding: 32px 0;
     padding-bottom: 0px;
     margin: auto ;    
-
+    color: #dad6ca;
 }
 
 
@@ -51,7 +53,7 @@ nav ul li{
 
 nav ul li a{
     text-decoration: none;
-    color: #563444;;
+    color: #dad6ca;;
 }
 
 a:hover{
@@ -71,6 +73,7 @@ main{
     grid-auto-rows: 1fr 1fr 1fr 1fr 1fr ;*/
  /*   grid-template-columns: auto; */
     justify-content: center;   
+    color: #dad6ca;
 
 }
 
@@ -166,7 +169,7 @@ main{
 }
 
 .links ul li a{    
-    color: black;
+    color: #dad6ca;
     margin-right: 4px;
     text-decoration: none;
 }
@@ -189,8 +192,10 @@ main{
     margin: auto;    
     height: 100vh;
     margin: auto;
-    color: #FFFAFA;
-    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(79,134,153,1) 0%, rgba(79,134,112,1) 100%);
+    background-color: rgba(56, 52, 68, 1);
+    /*color: #021b2b;
+    background-color: #dad6ca;*/
+   /* background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(79,134,153,1) 0%, rgba(79,134,112,1) 100%);*/
     margin-bottom: 20px;    
 }
 
@@ -319,11 +324,13 @@ main{
     min-width: 1fr;
     height: auto;
     margin: auto;  
-    margin-bottom: 100px;     
+    margin-bottom: 100px;    
+    color: black; 
 }
 
 .hobbies .tituloHobbies{
     text-align: center;
+    color: #dad6ca;
 }
 
 .hobbies .hobbies-blocos{
@@ -386,8 +393,9 @@ main{
     min-width: 1fr;
     height: auto;
     margin: auto;    
-    color: #FFFAFA;
-    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(79,134,153,1) 0%, rgba(79,134,112,1) 100%);
+    background-color: rgba(56, 52, 68, 1);
+  /*  color: #FFFAFA;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(79,134,153,1) 0%, rgba(79,134,112,1) 100%);*/
     margin-bottom: 70px;
 }
 
@@ -430,9 +438,9 @@ main{
 
 /*Projetos*/
 
-.projetos{    
-
-    position: relative;
+.projetos{        
+    border-style: solid;
+    border-width: 1px;
     max-width: 1140px;
     margin: auto;
 }
@@ -452,8 +460,10 @@ main{
 
 .projetos .GestorTarefas{
     display: grid;
+    width: 80%;
+    margin: auto;
     border-style: solid;        
-    background-color:  #fffafa;
+    background-color:  rgba(56, 52, 68, 1);
     margin-bottom: 5%;
 }
 
@@ -483,9 +493,12 @@ main{
 }
 
 .projetos .PagLinks{
+    width: 80%;
+    margin: auto;
     border-style: solid;
     display: grid;
-    background-color:  #fffafa;
+    background-color:  rgba(56, 52, 68, 1);
+    margin-bottom: 10px;
 }
 
 .projetos .PagLinks .Descricao-Projeto{
@@ -767,8 +780,7 @@ main{
 .projetos .GestorTarefas{
     border-style: solid;
     display: flex;    
-    flex-direction: column;
-    background-color:  #fffafa;
+    flex-direction: column;   
     margin-bottom: 5%;
 }
 
@@ -792,8 +804,7 @@ main{
 .projetos .PagLinks{
     border-style: solid;
     display: flex;    
-    flex-direction: column;
-    background-color:  #fffafa;
+    flex-direction: column; 
 }
 
 .projetos .PagLinks .Img-PagLinks{    
