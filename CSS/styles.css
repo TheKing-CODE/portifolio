@@ -67,9 +67,9 @@ a:hover{
 /* fim do header*/
 
 main{
-    display: grid;
-    grid-auto-rows: 1fr;
-    grid-template-columns: auto; 
+/*    display: grid;
+    grid-auto-rows: 1fr 1fr 1fr 1fr 1fr ;*/
+ /*   grid-template-columns: auto; */
     justify-content: center;   
 
 }
@@ -88,6 +88,7 @@ main{
     height: 100vh;
     border-bottom: dotted;
     border-size: 1px;
+    margin-bottom: 10px;
 }
 
 .introducao .topo{
@@ -190,6 +191,7 @@ main{
     margin: auto;
     color: #FFFAFA;
     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(79,134,153,1) 0%, rgba(79,134,112,1) 100%);
+    margin-bottom: 20px;    
 }
 
 .sobre .tituloSobre{
@@ -236,15 +238,14 @@ main{
 
 .skills{
     display: grid;
-    position: relative;
-    top: -25%;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;    
     width: 1140px;
     max-width: 1140px;
     min-width: 1fr;
     height: auto;
-    margin: auto;       
+    margin: auto; 
+    margin-bottom: 20px;      
 }
 
 .skills .tituloSkills{
@@ -311,16 +312,14 @@ main{
 
 .hobbies{
     display: grid;
-    position: relative;
-    top: -80%;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;    
     width: 1140px;
     max-width: 1140px;
     min-width: 1fr;
     height: auto;
-    border-style: solid;
-    margin: auto;       
+    margin: auto;  
+    margin-bottom: 100px;     
 }
 
 .hobbies .tituloHobbies{
@@ -379,9 +378,7 @@ main{
 /*Fim do hobbies*/
 
 .formacao{
-    display: grid;
-    position: relative;
-    top: -98%;
+    display: grid;    
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;    
     width: 1140px;
@@ -391,9 +388,8 @@ main{
     margin: auto;    
     color: #FFFAFA;
     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(79,134,153,1) 0%, rgba(79,134,112,1) 100%);
+    margin-bottom: 70px;
 }
-
-
 
 .formacao .tituloFormacao{
     text-align: center;
@@ -428,6 +424,87 @@ main{
 .formacao .formacao-icon figcaption{
     text-align: center;
     color: black;
+}
+
+/*Fim Formacão*/
+
+/*Projetos*/
+
+.projetos{    
+
+    position: relative;
+    max-width: 1140px;
+    margin: auto;
+}
+
+
+.projetos h1{
+    text-align: center;
+}
+
+.projetos a{    
+    color: black;
+}
+
+.projetos a:hover{    
+    font-size: 35px;
+}
+
+.projetos .GestorTarefas{
+    display: grid;
+    border-style: solid;        
+    background-color:  #fffafa;
+    margin-bottom: 5%;
+}
+
+.projetos .GestorTarefas h2{
+    text-align: center;
+}
+
+.projetos .GestorTarefas .Descricao-Projeto{
+    margin-left: 20px;
+}
+
+.projetos .GestorTarefas .Img-GestorTarefas{    
+    width: 50%;
+    margin: auto;
+    border-style: dotted;
+    border-width: 1px;
+}
+
+.projetos .GestorTarefas .links{
+    margin: auto;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+/* /// */
+.projetos .PagLinks h2{
+    text-align: center;
+}
+
+.projetos .PagLinks{
+    border-style: solid;
+    display: grid;
+    background-color:  #fffafa;
+}
+
+.projetos .PagLinks .Descricao-Projeto{
+    margin-left: 20px;
+}
+
+
+.projetos .PagLinks .Img-PagLinks{    
+    width: 50%;
+    margin: auto;
+    border-style: dotted;
+    border-width: 1px;
+}
+
+.projetos .PagLinks .links{
+    display: inline-block;
+    margin: auto;
+    font-size: 30px;
+    margin-bottom: 10px;
 }
 
 
@@ -545,6 +622,7 @@ main{
         width: 100%;
         max-height: 359px;
         min-height: auto;
+        margin-bottom: 25px;
     }
 
     .skills .skills-blocos{      
@@ -585,6 +663,7 @@ main{
         width: 100%;
         max-height: 540px;
         min-height: auto;
+        margin-bottom: 25px;
     }
 
     .hobbies .hobbies-blocos i{
@@ -624,8 +703,8 @@ main{
     /*Fim do hobbies*/
 
 .formacao{
-    top: -114%;
     width: 100%;
+    margin-bottom: 25px;
 }
 
 .formacao .tituloFormacao{
@@ -667,9 +746,77 @@ main{
     color: black;
 }
 
+
+/*Projetos*/
+
+.projetos{
+    display: inline-block; 
+    position: relative;
+
+}
+
+
+.projetos h1{
+    text-align: center;
+}
+
+.projetos .GestorTarefas h2{
+    text-align: center;
+}
+
+.projetos .GestorTarefas{
+    border-style: solid;
+    display: flex;    
+    flex-direction: column;
+    background-color:  #fffafa;
+    margin-bottom: 5%;
+}
+
+.projetos .GestorTarefas .Img-GestorTarefas{    
+    width: 80%;
+    margin: auto;
+    border-style: dotted;
+    border-width: 1px;
+}
+
+.projetos .GestorTarefas .links{
+    margin: auto;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+/* /// */
+.projetos .PagLinks h2{
+    text-align: center;
+}
+
+.projetos .PagLinks{
+    border-style: solid;
+    display: flex;    
+    flex-direction: column;
+    background-color:  #fffafa;
+}
+
+.projetos .PagLinks .Img-PagLinks{    
+    width: 80%;
+    margin: auto;
+    border-style: dotted;
+    border-width: 1px;
+}
+
+.projetos .PagLinks .links{
+    display: inline-block;
+    margin: auto;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+    
+
+
 html{
     margin-right: 0px;
     margin-left: 0px;
+}
+
 }
    
 
