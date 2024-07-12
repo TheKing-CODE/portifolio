@@ -136,6 +136,7 @@ main{
 .circle-image{  
     width: 550px;
     height: 550px;
+    background-color: #dad6ca;
     border-width: 8px;
 }
 
